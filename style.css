@@ -78,8 +78,8 @@ a img {
   border: none;
 }
 
-/* line 31, src/style.sass */
-html body #wrapper {
+/* line 33, src/style.sass */
+html body #wrapper #main #container {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
