@@ -1,16 +1,34 @@
 /*
+ * THEME NAME: Philumo
+ * THEME URI: http://www.philschilter.ch
+ * DESCRIPTION: One of the most beautiful wordpress themes
+ * VERSION: 0.1
+ * AUTHOR: Phil Schilter
+ * AUTHOR URI: http://www.philschilter.ch
+ * .
+ * This theme is based on the Thematic Theme http://themeshaper.com/
+ * This work, like WordPress, is released under GNU General Public License, version 2 (GPL).
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * .
  *
- * Theme Name: Philomu
- * Theme URL: www.philschilter.ch
- * Description: The most beautiful wordpress theme
- * Author: Phil Schilter
- * Author URL: www.philschilter.ch
- * Version: 1.0
- *
- * General comments/License Statement if any.
- * 
- /*  w00t  */
+
+/* Apply basic typography styles */
+@import url('library/styles/typography.css')
+/* Apply a basic layout */
+@import url('library/layouts/2c-r-fixed.css')
+/* Apply default theme styles and colors 
+@import url('library/styles/default.css')*/
+/* Prepare theme for plugins
+@import url('library/styles/plugins.css')*/
 
 @import compass/reset
+@import compass/utilities/general/clearfix.sass
+@import 960/grid
+@import 960/text
 
-body
+html
+  body
+    #wrapper
+      +grid-container
+      #main
+        

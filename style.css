@@ -1,0 +1,86 @@
+/* THEME NAME: Philumo
+ * THEME URI: http://www.philschilter.ch
+ * DESCRIPTION: One of the most beautiful wordpress themes
+ * VERSION: 0.1
+ * AUTHOR: Phil Schilter
+ * AUTHOR URI: http://www.philschilter.ch
+ * .
+ * This theme is based on the Thematic Theme http://themeshaper.com/
+ * This work, like WordPress, is released under GNU General Public License, version 2 (GPL).
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * .
+ * */
+/* Apply basic typography styles */
+@import url('library/styles/typography.css');
+/* Apply a basic layout */
+@import url('library/layouts/2c-r-fixed.css');
+/* Apply default theme styles and colors */
+@import url('library/styles/default.css')*/;
+/* Prepare theme for plugins */
+@import url('library/styles/plugins.css')*/;
+/* line 14, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 31, src/style.sass */
+html body #wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
