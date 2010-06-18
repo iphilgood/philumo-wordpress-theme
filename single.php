@@ -1,55 +1,31 @@
-<?php
+<?php get_header(); ?>
 
-    // calling the header.php
-    get_header();
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    // action hook for placing content above #container
-    thematic_abovecontainer();
-
-?>
-
-	<div id="container">
-		<div id="content">
-
-            <?php 
-            
-            the_post();
-            
-            // create the navigation above the content
-			thematic_navigation_above();
-
-            // calling the widget area 'single-top'
-            get_sidebar('single-top');
-
-            // action hook creating the single post
-            thematic_singlepost();
+		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			
-            // calling the widget area 'single-insert'
-            get_sidebar('single-insert');
+			<h2><?php the_title(); ?></h2>
+			
+			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
-            // create the navigation below the content
-			thematic_navigation_below();
+			<div class="entry">
+				
+				<?php the_content(); ?>
 
-            // calling the comments template
-            thematic_comments_template();
+				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
+				
+				<?php the_tags( 'Tags: ', ', ', ''); ?>
 
-            // calling the widget area 'single-bottom'
-            get_sidebar('single-bottom');
-            
-            ?>
+			</div>
+			
+			<?php edit_post_link('Edit this entry','','.'); ?>
+			
+		</div>
 
-		</div><!-- #content -->
-	</div><!-- #container -->
+	<?php comments_template(); ?>
 
-<?php 
+	<?php endwhile; endif; ?>
+	
+<?php get_sidebar(); ?>
 
-    // action hook for placing content below #container
-    thematic_belowcontainer();
-
-    // calling the standard sidebar 
-    thematic_sidebar();
-    
-    // calling footer.php
-    get_footer();
-
-?>
+<?php get_footer(); ?>

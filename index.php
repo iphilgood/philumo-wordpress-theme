@@ -1,53 +1,43 @@
-<?php
+<?php get_header(); ?>
+<div id="content-wrapper">
+  <div id="content">
+  	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    // calling the header.php
-    get_header();
+  		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-    // action hook for placing content above #container
-    thematic_abovecontainer();
+  			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
-?>
+  			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
-	<div id="container">
-		<div id="content">
+  			<div class="entry">
+  				<?php the_content(); ?>
+  			</div>
 
-			<?php 
-            
-            // create the navigation above the content
-            thematic_navigation_above();
-			
-            // calling the widget area 'index-top'
-            get_sidebar('index-top');
+  			<div class="postmetadata">
+  				<?php the_tags('Tags: ', ', ', '<br />'); ?>
+  				Posted in <?php the_category(', ') ?> | 
+  				<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
+  			</div>
 
-            // action hook for placing content above the index loop
-            thematic_above_indexloop();
+  		</div>
 
-            // action hook creating the index loop
-            thematic_indexloop();
+  	<?php endwhile; ?>
 
-            // action hook for placing content below the index loop
-            thematic_below_indexloop();
+  	<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
-            // calling the widget area 'index-bottom'
-            get_sidebar('index-bottom');
+  	<?php else : ?>
 
-            // create the navigation below the content
-            thematic_navigation_below();
-            
-            ?>
+  		<h2>Not Found</h2>
 
-		</div><!-- #content -->
-	</div><!-- #container -->
+  	<?php endif; ?>
+  </div> <!--end content -->
 
-<?php 
+  <div id="sidebar">
+    <?php get_sidebar(); ?>
+  </div>
 
-    // action hook for placing content below #container
-    thematic_belowcontainer();
+</div> <!--end content-container-->
 
-    // calling the standard sidebar 
-    thematic_sidebar();
-    
-    // calling footer.php
-    get_footer();
-
-?>
+<div id="footer-wrapper">
+  <?php get_footer(); ?>
+</div>

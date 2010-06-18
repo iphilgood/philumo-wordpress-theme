@@ -1,86 +1,83 @@
 /* 960 Grid System ~ Text CSS.
  * Learn more ~ http://960.gs/
  * *
- * Licensed under GPL and MIT. */
+ * Licensed under GPL and MIT.
+ * */
 /* line 4, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-body {
+body body {
   font: 13px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
-
 /* line 6, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-a:focus {
+body a:focus {
   outline: 1px dotted invert;
 }
-
 /* line 8, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-hr {
+body hr {
   border-color: #cccccc;
   border-style: solid;
   border-width: 1px 0 0;
   clear: both;
   height: 0;
 }
-
 /* line 14, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-h1 {
+body h1 {
   font-size: 25px;
 }
-
 /* line 16, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-h2 {
+body h2 {
   font-size: 23px;
 }
-
 /* line 18, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-h3 {
+body h3 {
   font-size: 21px;
 }
-
 /* line 20, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-h4 {
+body h4 {
   font-size: 19px;
 }
-
 /* line 22, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-h5 {
+body h5 {
   font-size: 17px;
 }
-
 /* line 24, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-h6 {
+body h6 {
   font-size: 15px;
 }
-
 /* line 26, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-ol {
+body ol {
   list-style: decimal;
 }
-
 /* line 28, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-ul {
+body ul {
   list-style: square;
 }
-
 /* line 30, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-li {
+body li {
   margin-left: 30px;
 }
-
 /* line 32, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
-p,
-dl,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-ul,
-pre,
-table,
-address,
-fieldset {
+body p,
+body dl,
+body hr,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body ol,
+body ul,
+body pre,
+body table,
+body address,
+body fieldset {
   margin-bottom: 20px;
+}
+/* line 11, src/text.sass */
+body h1 {
+  font-family: "Yanone Kaffeesatz", arial, serif;
+  color: white;
+  font-weight: 200;
+  font-size: 35px;
+  letter-spacing: 10%;
 }

@@ -1,73 +1,37 @@
-<?php
+<?php get_header(); ?>
 
-    // calling the header.php
-    get_header();
+	<?php if (have_posts()) : ?>
 
-    // action hook for placing content above #container
-    thematic_abovecontainer();
+		<h2>Search Results</h2>
 
-?>
+		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
-	<div id="container">
-		<div id="content">
+		<?php while (have_posts()) : the_post(); ?>
 
-            <?php 
-            
-            if (have_posts()) {
+			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-                // displays the page title
-                thematic_page_title();
+				<h2><?php the_title(); ?></h2>
 
-                // create the navigation above the content
-                thematic_navigation_above();
-			
-                // action hook for placing content above the search loop
-                thematic_above_searchloop();			
+				<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
-                // action hook creating the search loop
-                thematic_searchloop();
+				<div class="entry">
 
-                // action hook for placing content below the search loop
-                thematic_below_searchloop();			
+					<?php the_excerpt(); ?>
 
-                // create the navigation below the content
-                thematic_navigation_below();
-
-            } else { 
-                
-                ?>
-
-			<div id="post-0" class="post noresults">
-				<h1 class="entry-title"><?php _e('Nothing Found', 'thematic') ?></h1>
-				<div class="entry-content">
-					<p><?php _e('Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'thematic') ?></p>
 				</div>
-				<form id="noresults-searchform" method="get" action="<?php bloginfo('home') ?>">
-					<div>
-						<input id="noresults-s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="40" />
-						<input id="noresults-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'thematic') ?>" />
-					</div>
-				</form>
-			</div><!-- .post -->
 
-            <?php
-            
-            }
-            
-            ?>
+			</div>
 
-		</div><!-- #content -->
-	</div><!-- #container -->
+		<?php endwhile; ?>
 
-<?php 
+		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
-    // action hook for placing content below #container
-    thematic_belowcontainer();
+	<?php else : ?>
 
-    // calling the standard sidebar 
-    thematic_sidebar();
-    
-    // calling footer.php
-    get_footer();
+		<h2>No posts found.</h2>
 
-?>
+	<?php endif; ?>
+
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>

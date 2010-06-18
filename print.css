@@ -1,0 +1,115 @@
+/* line 1, src/print.sass */
+.do-not-print {
+  display: none;
+}
+
+/* line 3, src/print.sass */
+#comments {
+  page-break-before: always;
+}
+
+/* line 5, src/print.sass */
+body {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4;
+  word-spacing: 1.1pt;
+  letter-spacing: 0.2pt;
+  font-family: Garamond, "Times New Roman", serif;
+  color: black;
+  background: none;
+  font-size: 12pt;
+}
+
+/* line 16, src/print.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 18, src/print.sass */
+h1 {
+  font-size: 19pt;
+}
+
+/* line 20, src/print.sass */
+h2 {
+  font-size: 17pt;
+}
+
+/* line 22, src/print.sass */
+h3 {
+  font-size: 15pt;
+}
+
+/* line 24, src/print.sass */
+h4, h5, h6 {
+  font-size: 12pt;
+}
+
+/* line 26, src/print.sass */
+code {
+  font: 10pt Courier, monospace;
+}
+
+/* line 28, src/print.sass */
+blockquote {
+  margin: 1.3em;
+  padding: 1em;
+}
+
+/* line 31, src/print.sass */
+img {
+  display: block;
+  margin: 1em 0;
+}
+
+/* line 34, src/print.sass */
+a img {
+  border: none;
+}
+
+/* line 36, src/print.sass */
+table {
+  margin: 1px;
+  text-align: left;
+}
+
+/* line 39, src/print.sass */
+th {
+  border-bottom: 1px solid #333333;
+  font-weight: bold;
+}
+
+/* line 42, src/print.sass */
+td {
+  border-bottom: 1px solid #333333;
+}
+
+/* line 44, src/print.sass */
+th, td {
+  padding: 4px 10px 4px 0;
+}
+
+/* line 46, src/print.sass */
+caption {
+  background: white;
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+/* line 50, src/print.sass */
+thead {
+  display: table-header-group;
+}
+
+/* line 52, src/print.sass */
+tr {
+  page-break-inside: avoid;
+}
+
+/* line 54, src/print.sass */
+a {
+  text-decoration: none;
+  color: black;
+}

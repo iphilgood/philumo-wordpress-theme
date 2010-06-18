@@ -11,24 +11,68 @@
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * .
  *
-
-/* Apply basic typography styles */
-@import url('library/styles/typography.css')
-/* Apply a basic layout */
-@import url('library/layouts/2c-r-fixed.css')
-/* Apply default theme styles and colors 
-@import url('library/styles/default.css')*/
-/* Prepare theme for plugins
-@import url('library/styles/plugins.css')*/
+ /* W00t */
 
 @import compass/reset
+@import compass/utilities/lists
 @import 960/grid
 @import 960/text
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight);
 
-html
-  body
-    #wrapper
+$white = #FFFFFF
+$phil_blue = #5588EE
+
+body
+  +text
+  :background url('images/background.png')
+  #page-wrapper
+    :background url('images/background.png')
+    #header-wrapper
+      :background url('images/header-background.png') repeat-x
+      :height 101px
       #header
-      #main
-        #container
-          +grid-container
+        +grid-container
+        :padding 30px 0px 0px 0px
+        #logo
+          +grid(6,16)
+          +alpha
+        #main-navigation
+          +grid(6,16)
+          +grid-prefix(4,16)
+          +omega
+          ul
+            +horizontal-list
+body
+  #claim
+    +grid-container
+    :background url('images/claim-background.png') no-repeat
+    :height 193px
+    :padding 30px
+    a, .blue
+      :color $phil_blue
+      :text-decoration none
+    
+body
+  #content-wrapper
+    +grid-container
+    :min-height 900px
+    #content
+      +grid(10,16)
+      +alpha
+    #sidebar
+      +grid(6,16)
+      +omega
+
+body
+  #footer-wrapper
+    :background url('images/footer-background.png')
+    :min-height 570px
+    
+    
+body
+  h1
+    :font-family 'Yanone Kaffeesatz', arial, serif
+    :color $white
+    :font-weight 200
+    :font-size 40px
+    :line-height 120%
