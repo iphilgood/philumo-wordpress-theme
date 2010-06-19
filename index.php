@@ -1,43 +1,40 @@
 <?php get_header(); ?>
+
 <div id="content-wrapper">
   <div id="content">
-  	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <?php if (have_posts()) : ?>
 
-  		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+  		<?php while (have_posts()) : the_post(); ?>
 
-  			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+  			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+  				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+  				<small><?php the_time('F jS, Y') ?> <!-- by <?php the_author() ?> --></small>
 
-  			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+  				<div class="entry">
+  					<?php the_content('Read the rest of this entry &raquo;'); ?>
+  				</div>
 
-  			<div class="entry">
-  				<?php the_content(); ?>
+  				<p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
   			</div>
 
-  			<div class="postmetadata">
-  				<?php the_tags('Tags: ', ', ', '<br />'); ?>
-  				Posted in <?php the_category(', ') ?> | 
-  				<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
-  			</div>
+  		<?php endwhile; ?>
 
+  		<div class="navigation">
+  			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
+  			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
   		</div>
-
-  	<?php endwhile; ?>
-
-  	<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
   	<?php else : ?>
 
-  		<h2>Not Found</h2>
+  		<h2 class="center">Not Found</h2>
+  		<p class="center">Sorry, but you are looking for something that isn't here.</p>
+  		<?php get_search_form(); ?>
 
   	<?php endif; ?>
-  </div> <!--end content -->
-
-  <div id="sidebar">
-    <?php get_sidebar(); ?>
   </div>
-
-</div> <!--end content-container-->
-
-<div id="footer-wrapper">
-  <?php get_footer(); ?>
+  
+  <?php get_sidebar(); ?>
+  
 </div>
+
+<?php get_footer(); ?>

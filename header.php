@@ -57,7 +57,9 @@
           <div class="description"><?php bloginfo('description'); ?></div>
         -->
         <div id="logo">
-          <img src="<?php bloginfo('template_directory');?>/images/logo.png" alt="I am Phil Schilter" title="I am Phil Schilter">
+          <a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+            <img src="<?php bloginfo('template_directory');?>/images/logo.png" alt="I am Phil Schilter" title="I am Phil Schilter" />
+          </a>
         </div>
         <div id="main-navigation">
           <?php wp_nav_menu(); ?>

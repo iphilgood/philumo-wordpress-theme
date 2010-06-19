@@ -3,15 +3,15 @@
  * *
  * Licensed under GPL and MIT.
  * */
-/* line 4, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 4, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body body {
   font: 13px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
-/* line 6, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 6, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body a:focus {
   outline: 1px dotted invert;
 }
-/* line 8, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 8, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body hr {
   border-color: #cccccc;
   border-style: solid;
@@ -19,43 +19,43 @@ body hr {
   clear: both;
   height: 0;
 }
-/* line 14, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 14, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body h1 {
   font-size: 25px;
 }
-/* line 16, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 16, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body h2 {
   font-size: 23px;
 }
-/* line 18, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 18, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body h3 {
   font-size: 21px;
 }
-/* line 20, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 20, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body h4 {
   font-size: 19px;
 }
-/* line 22, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 22, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body h5 {
   font-size: 17px;
 }
-/* line 24, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 24, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body h6 {
   font-size: 15px;
 }
-/* line 26, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 26, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body ol {
   list-style: decimal;
 }
-/* line 28, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 28, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body ul {
   list-style: square;
 }
-/* line 30, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 30, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body li {
   margin-left: 30px;
 }
-/* line 32, ../../../../../../../Users/p-schilter/.rvm/gems/ruby-1.8.7-p249@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
+/* line 32, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body p,
 body dl,
 body hr,

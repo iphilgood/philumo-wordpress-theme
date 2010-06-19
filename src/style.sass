@@ -19,8 +19,8 @@
 @import 960/text
 @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight);
 
-$white = #FFFFFF
-$phil_blue = #5588EE
+$white: #FFFFFF
+$phil_blue: #5588EE
 
 body
   +text
@@ -41,13 +41,14 @@ body
           +grid-prefix(4,16)
           +omega
           ul
-            +horizontal-list
+            //+horizontal-list
 body
   #claim
     +grid-container
     :background url('images/claim-background.png') no-repeat
     :height 193px
     :padding 30px
+    :margin-top 20px
     a, .blue
       :color $phil_blue
       :text-decoration none
@@ -67,12 +68,22 @@ body
   #footer-wrapper
     :background url('images/footer-background.png')
     :min-height 570px
-    
+    #footer
+      +grid-container
+      :padding-top 40px
+      #let-us-talk
+        +grid(10,16)
+        +alpha
+      #social-stuff
+        +grid-prefix(1,16)
+        +grid(5,16)
+        +omega
     
 body
+  h1, h2, h3, h4, h5, h6, p
+    :color $white
   h1
     :font-family 'Yanone Kaffeesatz', arial, serif
-    :color $white
     :font-weight 200
     :font-size 40px
     :line-height 120%
