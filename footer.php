@@ -1,15 +1,22 @@
 <div id="footer-wrapper">
   <div id="footer">
     <div id="let-us-talk">
-      <h6>
-        Let Us Talk
-      </h6>
+      <h3>
+        Lass uns reden
+      </h3>
+      <span class="description">
+        Use the form below to drop me a line.
+      </span>
     </div> <!-- #let-us-talk -->
     
     <div id="social-stuff">
-      <h6>
-        Where To Find Me
-      </h6>
+      <h3>
+        Wo du mich findest
+      </h3>
+      <span class="description">
+        Yes! I’m social.
+      </span>
+      <spna>
     </div> <!-- #social-stuff -->
   </div><!-- #footer -->
 </div>

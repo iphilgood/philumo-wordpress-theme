@@ -20,7 +20,17 @@
 @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight);
 
 $white: #FFFFFF
+$black: #000000
+
+$phil_green: #6CF0AB
+$phil_red: #F1666C
+$phil_orange: #FC9700
 $phil_blue: #5588EE
+
+
+=post-preview-comment-link
+  :color $phil_blue
+  :text-decoration none
 
 body
   +text
@@ -28,7 +38,7 @@ body
   #page-wrapper
     :background url('images/background.png')
     #header-wrapper
-      :background url('images/header-background.png') repeat-x
+      //:background url('images/header-background.png') repeat-x
       :height 101px
       #header
         +grid-container
@@ -45,23 +55,46 @@ body
 body
   #claim
     +grid-container
-    :background url('images/claim-background.png') no-repeat
-    :height 193px
+    //:background url('images/claim-background.png') no-repeat
+    :background-color $black
+    :-webkit-border-radius 20px
+    :height 140px
     :padding 30px
     :margin-top 20px
+    :margin-bottom 40px
     a, .blue
       :color $phil_blue
       :text-decoration none
+    .green
+      :color $phil_green
+    .red
+      :color $phil_red
+    .orange
+      :color $phil_orange
     
 body
   #content-wrapper
     +grid-container
     :min-height 900px
     #content
-      +grid(10,16)
+      +grid(12,16)
+      :margin-right 0px
       +alpha
+      .post
+        +grid(4,16)
+        +alpha
+        small
+          :font-size 15px
+          :color $white
+          :margin 0px 0px 30px 0px
+          a
+            +post-preview-comment-link
+        .entry
+          :margin 30px 0px 0px 0px
+          p
+            :line-height 120%
     #sidebar
-      +grid(6,16)
+      +grid(4,16)
       +omega
 
 body
@@ -72,18 +105,36 @@ body
       +grid-container
       :padding-top 40px
       #let-us-talk
-        +grid(10,16)
+        +grid(8,16)
         +alpha
       #social-stuff
-        +grid-prefix(1,16)
-        +grid(5,16)
+        //+grid-prefix(1,16)
+        +grid(8,16)
         +omega
+      .description
+        :color $white
+        :font 15px
+        :margin 0px
+        :padding 0px
     
 body
   h1, h2, h3, h4, h5, h6, p
     :color $white
-  h1
+  h1, h3
     :font-family 'Yanone Kaffeesatz', arial, serif
     :font-weight 200
     :font-size 40px
     :line-height 120%
+  h2
+    :margin-bottom 5px
+    a
+      :font-family georgia, arial, serif
+      :font-size 20px
+      :line-height 120%
+      :color $phil_blue
+      :text-decoration none
+  h3
+    :color $phil_blue
+    :margin 0px
+    :padding 0px
+    :line-height 90%

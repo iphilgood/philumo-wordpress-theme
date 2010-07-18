@@ -58,7 +58,7 @@
         -->
         <div id="logo">
           <a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-            <img src="<?php bloginfo('template_directory');?>/images/logo.png" alt="I am Phil Schilter" title="I am Phil Schilter" />
+            <img src="<?php bloginfo('template_directory');?>/images/logo2.png" alt="I am Phil Schilter" title="I am Phil Schilter" />
           </a>
         </div>
         <div id="main-navigation">
@@ -70,9 +70,12 @@
     
     <div id="claim">
       <h1>
-        Hey there, I am <span class="blue">Phil Schilter</span> from Switzerland and 18 years old.<br />
-        This here is my first Wordpress Theme. I hope I have done a good job.<br /> 
-        <a href="http://www.twitter.com/phil_schilter" target="_blank">Follow me</a> on Twitter or read the latest news on my personal <a href="/blog">blog</a>.<br />
+        Ich bin <a class="green" href="/">Phil Schilter</a>, komme aus der Schweiz und bin 18 Jahre jung.<br />
+        Das hier ist mein erstes <a class="red" href="http://www.wordpress.org">Wordpress Theme</a> mit ganz viel Schwung.<br />
+        <a class="orange" href="http://www.twitter.com/phil_schilter">Folge mir</a> auf  Twitter, erfahre mehr <a class="blue" href="/blog">&uuml;ber mich</a> und du weisst warum.
+        <!-- Hey there, I am <span class="green">Phil Schilter</span> from Switzerland and 18 years old.<br />
+               This here is my first <span class="red">Wordpress Theme<span>. I hope I have done a good job.<br /> 
+               <a href="http://www.twitter.com/phil_schilter" target="_blank">Follow me</a> on Twitter or read the latest news on my personal <a href="/blog">blog</a>.<br /> -->
       </h1>
     </div>
 
