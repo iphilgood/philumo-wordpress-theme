@@ -14,67 +14,109 @@
  /* W00t */
 
 @import compass/reset
-@import compass/utilities/lists
+@import compass/utilities
 @import 960/grid
 @import 960/text
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight);
+@import compass/css3
 
 $white: #FFFFFF
 $black: #000000
 
-$phil_green: #6CF0AB
-$phil_red: #F1666C
-$phil_orange: #FC9700
-$phil_blue: #5588EE
+$darkgrey: #373737
 
 
 =post-preview-comment-link
-  :color $phil_blue
+  :color $darkgrey
   :text-decoration none
 
 body
   +text
-  :background url('images/background.png')
+  :background url('images/bg-blue.gif')
+  :font-family 'Yanone Kaffeesatz', arial, serif
+  :font-weight 200
   #page-wrapper
-    :background url('images/background.png')
-    #header-wrapper
-      //:background url('images/header-background.png') repeat-x
-      :height 101px
-      #header
-        +grid-container
-        :padding 30px 0px 0px 0px
-        #logo
-          +grid(6,16)
-          +alpha
-        #main-navigation
-          +grid(6,16)
-          +grid-prefix(4,16)
-          +omega
-          ul
-            //+horizontal-list
-body
-  #claim
     +grid-container
-    //:background url('images/claim-background.png') no-repeat
-    :background-color $black
-    :-webkit-border-radius 20px
-    :height 140px
-    :padding 30px
-    :margin-top 20px
-    :margin-bottom 40px
-    a, .blue
-      :color $phil_blue
-      :text-decoration none
-    .green
-      :color $phil_green
-    .red
-      :color $phil_red
-    .orange
-      :color $phil_orange
-    
+    :margin-top 50px
+    :height auto
+    #header
+      +alpha
+      +omega
+      :float left
+      #name-wrapper
+        :height 100px
+        +grid(12,24)
+        +alpha
+        #name
+          +alpha
+          +omega
+          :height 55px
+          :background url(images/logo.png) no-repeat
+      #main-navigation
+        +grid(12,24)
+        +omega
+        ul
+          +horizontal-list
+          :float right
+          :height 60px
+          li
+            :margin-right 10px
+            :height 100%
+            a
+              :color $white
+              :font-size 45px
+              :text-decoration none
+              :-webkit-transition text-shadow 0.3s ease-in-out
+              &:hover
+                :text-shadow 0px 0px 30px $white
+          .current_page_item
+            a
+              :text-shadow 0px 0px 30px $white
+    #claim
+      +grid(23,24)
+      +alpha
+      +omega
+      :background url('images/claim-bg.gif')
+      :font-size 40px
+      :text-align center
+      :padding 20px
+      :border 1px solid #315E84
+      :height 130px
+      a
+        :color $darkgrey
+        :text-decoration none
+        :-webkit-transition color 0.3s ease-in-out
+        &:hover
+          :color $white
+
+body
+  #blog-entries, #latest-tweets
+    +grid(24,24)
+    +alpha
+    +omega
+    :margin-top 50px
+    :font-family Helvetica, Arial, sans-serif
+    :font-size 15px
+    .blog-entry, .tweet
+      :width 100%
+      :height 50px
+      :background url('images/blog-twitter.png')
+      :display block
+      :margin 0px 0px 10px 0px
+      p
+        :margin 0px 0px 0px 60px
+        :padding 15px 0px 0px 0px
+        a
+          :color $darkgrey
+          :text-decoration none
+          :-webkit-transition color 0.3s ease-in-out
+          &:hover
+            :color $white
+    .tweet
+      :background url('images/blog-twitter.png')
+      :background-position 0px 50px
+  
 body
   #content-wrapper
-    +grid-container
     :min-height 900px
     #content
       +grid(12,16)
@@ -96,26 +138,6 @@ body
     #sidebar
       +grid(4,16)
       +omega
-
-body
-  #footer-wrapper
-    :background url('images/footer-background.png')
-    :min-height 570px
-    #footer
-      +grid-container
-      :padding-top 40px
-      #let-us-talk
-        +grid(8,16)
-        +alpha
-      #social-stuff
-        //+grid-prefix(1,16)
-        +grid(8,16)
-        +omega
-      .description
-        :color $white
-        :font 15px
-        :margin 0px
-        :padding 0px
     
 body
   h1, h2, h3, h4, h5, h6, p
@@ -131,10 +153,10 @@ body
       :font-family georgia, arial, serif
       :font-size 20px
       :line-height 120%
-      :color $phil_blue
+      :color $darkgrey
       :text-decoration none
   h3
-    :color $phil_blue
+    :color $darkgrey
     :margin 0px
     :padding 0px
     :line-height 90%

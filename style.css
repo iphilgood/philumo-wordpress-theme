@@ -71,10 +71,11 @@ a img {
   border: none;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight);;
-/* line 35, src/style.sass */
+/* line 32, src/style.sass */
 body {
-  background: url("images/background.png");
+  background: url("images/bg-blue.gif");
+  font-family: "Yanone Kaffeesatz", arial, serif;
+  font-weight: 200;
 }
 /* line 4, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-960-plugin-0.9.13/stylesheets/960/_text.sass */
 body body {
@@ -146,79 +147,174 @@ body address,
 body fieldset {
   margin-bottom: 20px;
 }
-/* line 38, src/style.sass */
+/* line 37, src/style.sass */
 body #page-wrapper {
-  background: url("images/background.png");
-}
-/* line 40, src/style.sass */
-body #page-wrapper #header-wrapper {
-  height: 101px;
-}
-/* line 43, src/style.sass */
-body #page-wrapper #header-wrapper #header {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
-  padding: 30px 0px 0px 0px;
+  margin-top: 50px;
+  height: auto;
 }
-/* line 46, src/style.sass */
-body #page-wrapper #header-wrapper #header #logo {
+/* line 41, src/style.sass */
+body #page-wrapper #header {
+  margin-left: 0;
+  margin-right: 0;
+  float: left;
+}
+/* line 45, src/style.sass */
+body #page-wrapper #header #name-wrapper {
+  height: 100px;
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 340px;
+  width: 460px;
   margin-left: 0;
 }
 /* line 49, src/style.sass */
-body #page-wrapper #header-wrapper #header #main-navigation {
+body #page-wrapper #header #name-wrapper #name {
+  margin-left: 0;
+  margin-right: 0;
+  height: 55px;
+  background: url(images/logo.png) no-repeat;
+}
+/* line 54, src/style.sass */
+body #page-wrapper #header #main-navigation {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 340px;
-  padding-left: 240px;
+  width: 460px;
   margin-right: 0;
 }
-
-/* line 56, src/style.sass */
-body #claim {
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-  background-color: black;
-  -webkit-border-radius: 20px;
-  height: 140px;
-  padding: 30px;
-  margin-top: 20px;
-  margin-bottom: 40px;
+/* line 57, src/style.sass */
+body #page-wrapper #header #main-navigation ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  display: inline-block;
+  float: right;
+  height: 60px;
 }
-/* line 65, src/style.sass */
-body #claim a, body #claim .blue {
-  color: #5588ee;
+/* line 8, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body #page-wrapper #header #main-navigation ul {
+  display: block;
+}
+/* line 50, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+body #page-wrapper #header #main-navigation ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 41, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+body #page-wrapper #header #main-navigation ul li:first-child, body #page-wrapper #header #main-navigation ul li.first {
+  padding-left: 0px;
+}
+/* line 43, ../../../../../../../Users/phil/.rvm/gems/ruby-1.8.7-p174@philschilter/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+body #page-wrapper #header #main-navigation ul li:last-child, body #page-wrapper #header #main-navigation ul li.last {
+  padding-right: 0px;
+}
+/* line 61, src/style.sass */
+body #page-wrapper #header #main-navigation ul li {
+  margin-right: 10px;
+  height: 100%;
+}
+/* line 64, src/style.sass */
+body #page-wrapper #header #main-navigation ul li a {
+  color: white;
+  font-size: 45px;
   text-decoration: none;
+  -webkit-transition: text-shadow 0.3s ease-in-out;
 }
-/* line 68, src/style.sass */
-body #claim .green {
-  color: #6cf0ab;
-}
-/* line 70, src/style.sass */
-body #claim .red {
-  color: #f1666c;
+/* line 69, src/style.sass */
+body #page-wrapper #header #main-navigation ul li a:hover {
+  text-shadow: 0px 0px 30px white;
 }
 /* line 72, src/style.sass */
-body #claim .orange {
-  color: #fc9700;
+body #page-wrapper #header #main-navigation ul .current_page_item a {
+  text-shadow: 0px 0px 30px white;
+}
+/* line 74, src/style.sass */
+body #page-wrapper #claim {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 900px;
+  margin-left: 0;
+  margin-right: 0;
+  background: url("images/claim-bg.gif");
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #315e84;
+  height: 130px;
+}
+/* line 84, src/style.sass */
+body #page-wrapper #claim a {
+  color: #373737;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease-in-out;
+}
+/* line 88, src/style.sass */
+body #page-wrapper #claim a:hover {
+  color: white;
 }
 
-/* line 76, src/style.sass */
+/* line 92, src/style.sass */
+body #blog-entries, body #latest-tweets {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 50px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+/* line 99, src/style.sass */
+body #blog-entries .blog-entry, body #blog-entries .tweet, body #latest-tweets .blog-entry, body #latest-tweets .tweet {
+  width: 100%;
+  height: 50px;
+  background: url("images/blog-twitter.png");
+  display: block;
+  margin: 0px 0px 10px 0px;
+}
+/* line 105, src/style.sass */
+body #blog-entries .blog-entry p, body #blog-entries .tweet p, body #latest-tweets .blog-entry p, body #latest-tweets .tweet p {
+  margin: 0px 0px 0px 60px;
+  padding: 15px 0px 0px 0px;
+}
+/* line 108, src/style.sass */
+body #blog-entries .blog-entry p a, body #blog-entries .tweet p a, body #latest-tweets .blog-entry p a, body #latest-tweets .tweet p a {
+  color: #373737;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease-in-out;
+}
+/* line 112, src/style.sass */
+body #blog-entries .blog-entry p a:hover, body #blog-entries .tweet p a:hover, body #latest-tweets .blog-entry p a:hover, body #latest-tweets .tweet p a:hover {
+  color: white;
+}
+/* line 114, src/style.sass */
+body #blog-entries .tweet, body #latest-tweets .tweet {
+  background: url("images/blog-twitter.png");
+  background-position: 0px 50px;
+}
+
+/* line 119, src/style.sass */
 body #content-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
   min-height: 900px;
 }
-/* line 79, src/style.sass */
+/* line 121, src/style.sass */
 body #content-wrapper #content {
   display: inline;
   float: left;
@@ -228,7 +324,7 @@ body #content-wrapper #content {
   margin-right: 0px;
   margin-left: 0;
 }
-/* line 83, src/style.sass */
+/* line 125, src/style.sass */
 body #content-wrapper #content .post {
   display: inline;
   float: left;
@@ -237,26 +333,26 @@ body #content-wrapper #content .post {
   width: 220px;
   margin-left: 0;
 }
-/* line 86, src/style.sass */
+/* line 128, src/style.sass */
 body #content-wrapper #content .post small {
   font-size: 15px;
   color: white;
   margin: 0px 0px 30px 0px;
 }
-/* line 90, src/style.sass */
+/* line 132, src/style.sass */
 body #content-wrapper #content .post small a {
-  color: #5588ee;
+  color: #373737;
   text-decoration: none;
 }
-/* line 92, src/style.sass */
+/* line 134, src/style.sass */
 body #content-wrapper #content .post .entry {
   margin: 30px 0px 0px 0px;
 }
-/* line 94, src/style.sass */
+/* line 136, src/style.sass */
 body #content-wrapper #content .post .entry p {
   line-height: 120%;
 }
-/* line 96, src/style.sass */
+/* line 138, src/style.sass */
 body #content-wrapper #sidebar {
   display: inline;
   float: left;
@@ -266,70 +362,32 @@ body #content-wrapper #sidebar {
   margin-right: 0;
 }
 
-/* line 101, src/style.sass */
-body #footer-wrapper {
-  background: url("images/footer-background.png");
-  min-height: 570px;
-}
-/* line 104, src/style.sass */
-body #footer-wrapper #footer {
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-  padding-top: 40px;
-}
-/* line 107, src/style.sass */
-body #footer-wrapper #footer #let-us-talk {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 460px;
-  margin-left: 0;
-}
-/* line 110, src/style.sass */
-body #footer-wrapper #footer #social-stuff {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 460px;
-  margin-right: 0;
-}
-/* line 114, src/style.sass */
-body #footer-wrapper #footer .description {
-  color: white;
-  font: 15px;
-  margin: 0px;
-  padding: 0px;
-}
-
-/* line 121, src/style.sass */
+/* line 143, src/style.sass */
 body h1, body h2, body h3, body h4, body h5, body h6, body p {
   color: white;
 }
-/* line 123, src/style.sass */
+/* line 145, src/style.sass */
 body h1, body h3 {
   font-family: "Yanone Kaffeesatz", arial, serif;
   font-weight: 200;
   font-size: 40px;
   line-height: 120%;
 }
-/* line 128, src/style.sass */
+/* line 150, src/style.sass */
 body h2 {
   margin-bottom: 5px;
 }
-/* line 130, src/style.sass */
+/* line 152, src/style.sass */
 body h2 a {
   font-family: georgia, arial, serif;
   font-size: 20px;
   line-height: 120%;
-  color: #5588ee;
+  color: #373737;
   text-decoration: none;
 }
-/* line 136, src/style.sass */
+/* line 158, src/style.sass */
 body h3 {
-  color: #5588ee;
+  color: #373737;
   margin: 0px;
   padding: 0px;
   line-height: 90%;
