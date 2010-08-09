@@ -227,14 +227,14 @@ body #page-wrapper #header #main-navigation ul li {
   height: 100%;
 }
 /* line 64, src/style.sass */
-body #page-wrapper #header #main-navigation ul li a {
+body #page-wrapper #header #main-navigation ul li a, body #page-wrapper #header #main-navigation ul li a:visited {
   color: white;
   font-size: 45px;
   text-decoration: none;
   -webkit-transition: text-shadow 0.3s ease-in-out;
 }
 /* line 69, src/style.sass */
-body #page-wrapper #header #main-navigation ul li a:hover {
+body #page-wrapper #header #main-navigation ul li a:hover, body #page-wrapper #header #main-navigation ul li a:visited:hover {
   text-shadow: 0px 0px 30px white;
 }
 /* line 72, src/style.sass */
@@ -282,7 +282,7 @@ body #blog-entries, body #latest-tweets {
   font-size: 15px;
 }
 /* line 99, src/style.sass */
-body #blog-entries .blog-entry, body #blog-entries .tweet, body #latest-tweets .blog-entry, body #latest-tweets .tweet {
+body #blog-entries .blog-entry, body #blog-entries .tweet-list, body #latest-tweets .blog-entry, body #latest-tweets .tweet-list {
   width: 100%;
   height: 50px;
   background: url("images/blog-twitter.png");
@@ -290,31 +290,54 @@ body #blog-entries .blog-entry, body #blog-entries .tweet, body #latest-tweets .
   margin: 0px 0px 10px 0px;
 }
 /* line 105, src/style.sass */
-body #blog-entries .blog-entry p, body #blog-entries .tweet p, body #latest-tweets .blog-entry p, body #latest-tweets .tweet p {
+body #blog-entries .blog-entry p, body #blog-entries .tweet-list p, body #latest-tweets .blog-entry p, body #latest-tweets .tweet-list p {
   margin: 0px 0px 0px 60px;
   padding: 15px 0px 0px 0px;
 }
 /* line 108, src/style.sass */
-body #blog-entries .blog-entry p a, body #blog-entries .tweet p a, body #latest-tweets .blog-entry p a, body #latest-tweets .tweet p a {
+body #blog-entries .blog-entry p a, body #blog-entries .tweet-list p a, body #latest-tweets .blog-entry p a, body #latest-tweets .tweet-list p a {
   color: #373737;
   text-decoration: none;
   -webkit-transition: color 0.3s ease-in-out;
 }
 /* line 112, src/style.sass */
-body #blog-entries .blog-entry p a:hover, body #blog-entries .tweet p a:hover, body #latest-tweets .blog-entry p a:hover, body #latest-tweets .tweet p a:hover {
+body #blog-entries .blog-entry p a:hover, body #blog-entries .tweet-list p a:hover, body #latest-tweets .blog-entry p a:hover, body #latest-tweets .tweet-list p a:hover {
   color: white;
 }
-/* line 114, src/style.sass */
-body #blog-entries .tweet, body #latest-tweets .tweet {
+/* line 116, src/style.sass */
+body #latest-tweets ul li {
+  height: 35px;
+  display: block;
+  margin: 0px 0px 10px 0px;
   background: url("images/blog-twitter.png");
   background-position: 0px 50px;
+  padding: 15px 0px 0px 0px;
+  color: white;
+}
+/* line 124, src/style.sass */
+body #latest-tweets ul li span {
+  margin: 0px 0px 0px 0px;
+}
+/* line 126, src/style.sass */
+body #latest-tweets ul li span a {
+  color: #373737;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease-in-out;
+}
+/* line 130, src/style.sass */
+body #latest-tweets ul li span a:hover {
+  color: white;
+}
+/* line 132, src/style.sass */
+body #latest-tweets ul li span.tweet_time {
+  margin: 0px 0px 0px 60px;
 }
 
-/* line 119, src/style.sass */
+/* line 136, src/style.sass */
 body #content-wrapper {
   min-height: 900px;
 }
-/* line 121, src/style.sass */
+/* line 138, src/style.sass */
 body #content-wrapper #content {
   display: inline;
   float: left;
@@ -324,7 +347,7 @@ body #content-wrapper #content {
   margin-right: 0px;
   margin-left: 0;
 }
-/* line 125, src/style.sass */
+/* line 142, src/style.sass */
 body #content-wrapper #content .post {
   display: inline;
   float: left;
@@ -333,26 +356,26 @@ body #content-wrapper #content .post {
   width: 220px;
   margin-left: 0;
 }
-/* line 128, src/style.sass */
+/* line 145, src/style.sass */
 body #content-wrapper #content .post small {
   font-size: 15px;
   color: white;
   margin: 0px 0px 30px 0px;
 }
-/* line 132, src/style.sass */
+/* line 149, src/style.sass */
 body #content-wrapper #content .post small a {
   color: #373737;
   text-decoration: none;
 }
-/* line 134, src/style.sass */
+/* line 151, src/style.sass */
 body #content-wrapper #content .post .entry {
   margin: 30px 0px 0px 0px;
 }
-/* line 136, src/style.sass */
+/* line 153, src/style.sass */
 body #content-wrapper #content .post .entry p {
   line-height: 120%;
 }
-/* line 138, src/style.sass */
+/* line 155, src/style.sass */
 body #content-wrapper #sidebar {
   display: inline;
   float: left;
@@ -362,22 +385,22 @@ body #content-wrapper #sidebar {
   margin-right: 0;
 }
 
-/* line 143, src/style.sass */
+/* line 160, src/style.sass */
 body h1, body h2, body h3, body h4, body h5, body h6, body p {
   color: white;
 }
-/* line 145, src/style.sass */
+/* line 162, src/style.sass */
 body h1, body h3 {
   font-family: "Yanone Kaffeesatz", arial, serif;
   font-weight: 200;
   font-size: 40px;
   line-height: 120%;
 }
-/* line 150, src/style.sass */
+/* line 167, src/style.sass */
 body h2 {
   margin-bottom: 5px;
 }
-/* line 152, src/style.sass */
+/* line 169, src/style.sass */
 body h2 a {
   font-family: georgia, arial, serif;
   font-size: 20px;
@@ -385,7 +408,7 @@ body h2 a {
   color: #373737;
   text-decoration: none;
 }
-/* line 158, src/style.sass */
+/* line 175, src/style.sass */
 body h3 {
   color: #373737;
   margin: 0px;

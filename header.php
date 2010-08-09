@@ -36,12 +36,17 @@
 
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:light:300' rel='stylesheet' type='text/css' />
+  
 
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
   <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
   <?php wp_head(); ?>
+  
+  <script language="javascript" src="<?php bloginfo('template_directory'); ?>/includes/javascripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+  <script language="javascript" src="<?php bloginfo('template_directory'); ?>/includes/javascripts/jquery.tweet.js" type="text/javascript"></script>
+  <script language="javascript" src="<?php bloginfo('template_directory'); ?>/includes/javascripts/philschilter.js" type="text/javascript"></script>
 
 </head>
 

@@ -35,30 +35,7 @@ get_header(); ?>
   </div>
   
   <div id="latest-tweets">
-    <div class="tweet">
-      <p>
-        <?php
-
-        $username = "phil_schilter";
-
-        $feed = "http://search.twitter.com/search.atom?q=from:" . $username;
-
-        function parse_feed($feed) {
-            $stepOne = explode("<content type=\"html\">", $feed);
-            $stepTwo = explode("</content>", $stepOne[1]);
-            $tweet = $stepTwo[0];
-            $tweet = str_replace("&lt;", "<", $tweet);
-            $tweet = str_replace("&gt;", ">", $tweet);
-            $tweet = str_replace("&quot;", "\"", $tweet);
-            $tweet = str_replace("&amp;apos;", "'", $tweet);
-            return $tweet;
-        }
-
-        $twitterFeed = file_get_contents($feed);
-        echo parse_feed($twitterFeed);
-        ?>
-      </p>
-    </div>
+    
   </div>
   
 </div><!-- #content-wrapper -->
