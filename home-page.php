@@ -13,7 +13,7 @@ get_header(); ?>
 
 <div id="claim">
   <p>
-    Hey there, I am <a href="/">Phil Schilter</a> from Switzerland and 18 years old.<br />
+    Hey there, I am <a href="/">Phil Good</a> from Switzerland and 18 years old.<br />
     This here is my new website. I hope I have done a good job.<br />
     <a href="http://www.twitter.com/phil_schilter" target="_blank">Follow me on Twitter</a> or read the latest news on my personal <a href="/blog/">blog</a>.
   </p>

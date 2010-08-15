@@ -44,15 +44,20 @@ body
       :float left
       #name-wrapper
         :height 100px
-        +grid(12,24)
+        +grid(7,24)
         +alpha
         #name
           +alpha
           +omega
           :height 55px
           :background url(images/logo.png) no-repeat
+          a
+            :display block
+            :width 100%
+            :height 100%
       #main-navigation
         +grid(12,24)
+        +grid-prefix(5,24)
         +omega
         ul
           +horizontal-list
@@ -61,8 +66,9 @@ body
           li
             :margin-right 10px
             :height 100%
-            a, a:visited
+            a
               :color $white
+              :font-weight 300
               :font-size 45px
               :text-decoration none
               :-webkit-transition text-shadow 0.3s ease-in-out
@@ -71,6 +77,7 @@ body
           .current_page_item
             a
               :text-shadow 0px 0px 30px $white
+              :font-weight 300
     #claim
       +grid(23,24)
       +alpha
@@ -135,27 +142,25 @@ body
 body
   #content-wrapper
     :min-height 900px
+    +grid(12,16)
+    +alpha
     #content
       +grid(12,16)
-      :margin-right 0px
       +alpha
       .post
-        +grid(4,16)
-        +alpha
-        small
-          :font-size 15px
-          :color $white
-          :margin 0px 0px 30px 0px
-          a
-            +post-preview-comment-link
-        .entry
-          :margin 30px 0px 0px 0px
-          p
-            :line-height 120%
-    #sidebar
-      +grid(4,16)
-      +omega
-    
+        +grid(12,16)
+        .category
+          +grid(2,16)
+          +alpha
+          :height 100px
+          :background rgba(250, 250, 250, 0.6)
+        .entry-wrapper
+          +grid(10,16)
+          +omega
+  #sidebar
+    +grid(4,16)
+    +omega
+  
 body
   h1, h2, h3, h4, h5, h6, p
     :color $white
