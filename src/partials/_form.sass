@@ -1,0 +1,35 @@
+#respond
+  :margin-top 20px
+  #commentform
+    :padding 10px
+    label
+      :color $white
+      :font-size 15px
+      :margin-bottom 10px
+      :display block
+    input, textarea
+      :border 1px solid $white
+      :font-size 19px
+      :margin-bottom 10px
+      :-moz-border-radius 3px
+      :-moz-transition -moz-box-shadow 0.2s ease
+      :padding 5px 5px 5px 10px
+      :-webkit-border-radius 3px
+      :-webkit-transition -webkit-box-shadow 0.2s ease
+      :width 535px
+      :display block
+      &:focus
+        :outline-style none
+        :outline-width 0px
+        :-webkit-box-shadow 0 0 8px $white
+        :-moz-box-shadow 0 0 8px $white
+    textarea
+      :resize none
+    input#submit
+      :background $darkgrey
+      +opacity(0.6)
+      +button
+      &:hover
+        +opacity(1)
+      &:active
+        :margin-top 3px

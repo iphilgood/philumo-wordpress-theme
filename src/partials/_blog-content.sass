@@ -1,0 +1,33 @@
+body
+  #content-wrapper
+    :min-height 900px
+    +grid(24,24)
+    +alpha
+    +omega
+    :font-family Helvetica, arial, serif
+    #content
+      +grid(24,24)
+      +alpha
+      +omega
+      .post
+        +grid(24,24)
+        +alpha
+        +omega
+        .post-meta
+          +grid(3,24)
+          +alpha
+          :height auto
+          :font-size 12px
+          a
+            :color $white
+            :text-decoration none
+        .entry-wrapper
+          +grid(21,24)
+          +omega
+          .entry
+            :background url('images/claim-bg.gif')
+            :border 3px solid $darkblue
+            :-webkit-border-radius 4px
+            :width 814px
+          p
+            :font-size 15px

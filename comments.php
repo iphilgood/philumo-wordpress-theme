@@ -12,7 +12,7 @@
 
 <?php if ( have_comments() ) : ?>
 	
-	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
+	<h4><?php comments_number('No Notes', '1 Note', '% Notes'); ?> on <?php the_title(); ?></h4>
 
 	<div class="navigation">
 		<div class="next-posts"><?php previous_comments_link() ?></div>
@@ -44,7 +44,7 @@
 
 <div id="respond">
 
-	<h2><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h2>
+	<h4>Leave a note</h4>
 
 	<div class="cancel-comment-reply">
 		<?php cancel_comment_reply_link(); ?>
@@ -63,18 +63,18 @@
 		<?php else : ?>
 
 			<div>
-				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 				<label for="author">Name <?php if ($req) echo "(required)"; ?></label>
+				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 			</div>
 
 			<div>
-				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 				<label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
+				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 			</div>
 
 			<div>
-				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 				<label for="url">Website</label>
+				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 			</div>
 
 		<?php endif; ?>
@@ -82,6 +82,7 @@
 		<!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
 
 		<div>
+		  <label for="comment">Comment</label>
 			<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
 		</div>
 

@@ -19,21 +19,14 @@
 @import 960/text
 @import compass/css3
 
-$white: #FFFFFF
-$black: #000000
-
-$darkgrey: #373737
+@import partials/colors
+@import partials/mixins
 
 
-=post-preview-comment-link
-  :color $darkgrey
-  :text-decoration none
+
 
 body
-  +text
   :background url('images/bg-blue.gif')
-  :font-family 'Yanone Kaffeesatz', arial, serif
-  :font-weight 200
   #page-wrapper
     +grid-container
     :margin-top 50px
@@ -64,30 +57,36 @@ body
           :float right
           :height 60px
           li
-            :margin-right 10px
             :height 100%
             a
+              +font-fam
+              :font-size 30px
               :color $white
-              :font-weight 300
-              :font-size 45px
-              :text-decoration none
-              :-webkit-transition text-shadow 0.3s ease-in-out
+              :background url('images/claim-bg.gif')
+              :padding 10px
+              //+opacity(0.6)
+              :border 3px solid $darkblue
+              :-webkit-border-radius 4px
+              :display block
+              :-webkit-transition border-color 0.3s ease
               &:hover
-                :text-shadow 0px 0px 30px $white
-          .current_page_item
+                :border-color $white
+          li.current_page_item, li.current_page_parent
             a
-              :text-shadow 0px 0px 30px $white
-              :font-weight 300
+              :border-color $white
     #claim
       +grid(23,24)
       +alpha
       +omega
       :background url('images/claim-bg.gif')
-      :font-size 40px
       :text-align center
       :padding 20px
-      :border 1px solid #315E84
+      :border 3px solid $darkblue
+      :-webkit-border-radius 4px
       :height 130px
+      p
+        +font-fam
+        :font-size 40px
       a
         :color $darkgrey
         :text-decoration none
@@ -139,32 +138,12 @@ body
         span.tweet_time
           :margin 0px 0px 0px 60px
   
-body
-  #content-wrapper
-    :min-height 900px
-    +grid(12,16)
-    +alpha
-    #content
-      +grid(12,16)
-      +alpha
-      .post
-        +grid(12,16)
-        .category
-          +grid(2,16)
-          +alpha
-          :height 100px
-          :background rgba(250, 250, 250, 0.6)
-        .entry-wrapper
-          +grid(10,16)
-          +omega
-  #sidebar
-    +grid(4,16)
-    +omega
-  
+
 body
   h1, h2, h3, h4, h5, h6, p
     :color $white
-  h1, h3
+    :padding 10px
+  h1, h3, h4
     :font-family 'Yanone Kaffeesatz', arial, serif
     :font-weight 200
     :font-size 40px
@@ -172,7 +151,7 @@ body
   h2
     :margin-bottom 5px
     a
-      :font-family georgia, arial, serif
+      :font-family Helvetica, arial, serif
       :font-size 20px
       :line-height 120%
       :color $darkgrey
@@ -182,3 +161,22 @@ body
     :margin 0px
     :padding 0px
     :line-height 90%
+  p
+    :font-size 15px
+    :font-family Helvetica, arial, serif
+  a
+    :color $darkgrey
+    :-webkit-transition color 0.3s ease
+    :text-decoration none
+    &:hover
+      :color $white
+
+
+//
+// Partial Imports
+//
+
+@import partials/post-navigation
+@import partials/blog-content
+@import partials/comments
+@import partials/form

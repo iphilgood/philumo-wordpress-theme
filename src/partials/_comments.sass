@@ -1,0 +1,19 @@
+.commentlist
+  :padding 10px
+  :color $white
+  p
+    :padding 0px
+
+.reply
+  :height 30px
+  :margin-top 20px
+  .comment-reply-link
+    +button
+    :float right
+
+.comment
+  .comment-reply-link
+    :display none
+.comment:hover
+  .comment-reply-link
+    :display block
