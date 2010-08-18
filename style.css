@@ -838,3 +838,8 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   margin-right: auto;
   width: 960px;
 }
+/* line 17, src/partials/_footer.sass */
+#footer h4 {
+  color: #315e84;
+  padding: 0px;
+}
