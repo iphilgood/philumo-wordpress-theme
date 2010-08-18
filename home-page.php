@@ -25,10 +25,11 @@ get_header(); ?>
   ?>
   
   <div id="blog-entries">
+    <?php query_posts('posts_per_page=3'); ?>
     <?php while (have_posts()) : the_post(); ?>
      <div class="blog-entry">
        <p>
-         <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> about <?php the_time('d'); ?> days ago.
+         <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> about <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago.'; ?>
        </p>
      </div>
     <?php endwhile; ?>

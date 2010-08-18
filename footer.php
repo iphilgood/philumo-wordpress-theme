@@ -1,4 +1,8 @@
-  <div id="footer-wrapper">
+<div id="footer-wrapper">
+  <div id="footer-spacer">
+
+  </div>
+  <div id="footer">
     <div id="primary" class="widget-area" role="complementary">
       <ul class="xoxo">
 
@@ -48,7 +52,6 @@
 
     </div>
   </div>
-</div>
 <!-- Don't forget analytics -->
 
 </body>

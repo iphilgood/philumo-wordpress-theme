@@ -1,5 +1,4 @@
 .commentlist
-  :padding 10px
   :color $white
   p
     :padding 0px
@@ -12,8 +11,88 @@
     :float right
 
 .comment
+  ul
+    :margin-left 50px
+
+.comment-body
+  :padding 10px
+  :background url('images/claim-bg.gif')
+  :border 1px solid $darkblue
+  :-webkit-border-radius 4px
+  :margin-bottom 10px
+  p
+    :clear both
   .comment-reply-link
     :display none
-.comment:hover
+
+.comment-body:hover
   .comment-reply-link
     :display block
+    
+.comment-author
+  :display block
+  :float left
+  img
+    :float left
+    :border 3px solid $white
+    :margin 0px 10px 10px 0px
+    :-webkit-border-radius 4px
+  cite
+    :float left
+    :display block
+    :margin-right 20px
+    
+.says
+  :display none
+  
+.comment-meta
+  :margin-bottom 50px
+  :display block
+  :float left
+  a
+    :display none
+  .comment-edit-link
+    :display block
+    :float left
+
+#respond
+  :margin-top 20px
+  #commentform
+    :margin-top 20px
+    :color $white
+    label
+      +font-fam
+      :font-size 30px
+      :margin-bottom 10px
+      :display block
+      :padding 0px 10px
+    input, textarea
+      :border 1px solid $white
+      :font-size 19px
+      :margin-bottom 10px
+      :-moz-border-radius 3px
+      :-moz-transition -moz-box-shadow 0.2s ease
+      :padding 5px 5px 5px 10px
+      :-webkit-border-radius 3px
+      :-webkit-transition -webkit-box-shadow 0.2s ease
+      :width 535px
+      :display block
+      :color $black
+      &:focus
+        :outline-style none
+        :outline-width 0px
+        :-webkit-box-shadow 0 0 8px $white
+        :-moz-box-shadow 0 0 8px $white
+    textarea
+      :resize none
+    #submit-button
+      :height 30px
+      input
+        :background $darkgrey
+        +opacity(0.6)
+        +button
+        &:hover
+          +opacity(1)
+        &:active
+          :margin-top 3px
+  

@@ -13,11 +13,32 @@
         
         <div class="post-meta">
           
+          <div class="category-image">
+            <?php
+              // Get the ID of a given category
+              $category_id = get_cat_ID( 'Uncategorized' );
+
+              // Get the URL of this category
+              $category_link = get_category_link( $category_id );
+            ?>
+
+            <!-- Print a link to this category -->
+            
+            
+            <?php if (is_category('Category A')) { ?>
+            <p>This is the text to describe category A</p>
+            <?php } elseif (is_category('Category B')) { ?>
+            <p>This is the text to describe category B</p>
+            <?php } else { ?>
+              <div class="uncategorized">
+                <a href="<?php echo $category_link; ?>" title="Uncategorized"></a>
+              </div>
+            <?php } ?>
+          </div>
+          
+          
           <!-- Publish Date -->
           <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; ?><br /><br />
-          
-          <!-- Comments  -->
-            <?php comments_popup_link('No Notes', '1 Note', '% Notes'); ?><br /><br />
             
           <!-- Tweet Button -->
             <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical">
@@ -28,10 +49,18 @@
           <!-- Facebook Share Button -->
           <a name="fb_share" type="box_count" href="http://www.facebook.com/sharer.php">Teilen</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
           
-        </div>
-
+        
+      </div>
         <div class="entry-wrapper">
-          <h1><?php the_title(); ?></h1>
+          <div id="title-wrapper">
+            <h1>
+              <?php the_title(); ?>
+            </h1>
+            <div class="comment-cloud">
+              <!-- Comments  -->
+              <?php comments_popup_link('0', '1', '%'); ?>
+            </div>
+          </div>
           <div class="entry">
             <?php the_content(); ?>
           </div>
@@ -39,9 +68,10 @@
         </div>
 
         <?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-
+      </div>
     <?php endwhile; endif; ?>
   </div>
+</div>
 </div>
 
 <?php get_footer(); ?>
