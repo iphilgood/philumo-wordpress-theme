@@ -101,18 +101,17 @@ body #page-wrapper #header #name-wrapper {
 }
 /* line 42, src/style.sass */
 body #page-wrapper #header #name-wrapper #name {
-  margin-left: 0;
-  margin-right: 0;
   height: 55px;
   background: url(images/logo.png) no-repeat;
+  margin-left: 10px;
 }
-/* line 47, src/style.sass */
+/* line 46, src/style.sass */
 body #page-wrapper #header #name-wrapper #name a {
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 51, src/style.sass */
+/* line 50, src/style.sass */
 body #page-wrapper #header #main-navigation {
   display: inline;
   float: left;
@@ -122,7 +121,7 @@ body #page-wrapper #header #main-navigation {
   padding-left: 200px;
   margin-right: 0;
 }
-/* line 55, src/style.sass */
+/* line 54, src/style.sass */
 body #page-wrapper #header #main-navigation ul {
   margin: 0;
   padding: 0;
@@ -156,11 +155,11 @@ body #page-wrapper #header #main-navigation ul li:first-child, body #page-wrappe
 body #page-wrapper #header #main-navigation ul li:last-child, body #page-wrapper #header #main-navigation ul li.last {
   padding-right: 0px;
 }
-/* line 59, src/style.sass */
+/* line 58, src/style.sass */
 body #page-wrapper #header #main-navigation ul li {
   height: 100%;
 }
-/* line 61, src/style.sass */
+/* line 60, src/style.sass */
 body #page-wrapper #header #main-navigation ul li a {
   font-family: "Yanone Kaffeesatz", serif;
   font-style: normal;
@@ -177,31 +176,30 @@ body #page-wrapper #header #main-navigation ul li a {
   display: block;
   -webkit-transition: border-color 0.3s ease;
 }
-/* line 72, src/style.sass */
+/* line 71, src/style.sass */
 body #page-wrapper #header #main-navigation ul li a:hover {
   border-color: white;
 }
-/* line 75, src/style.sass */
+/* line 74, src/style.sass */
 body #page-wrapper #header #main-navigation ul li.current_page_item a, body #page-wrapper #header #main-navigation ul li.current_page_parent a {
   border-color: white;
 }
-/* line 77, src/style.sass */
+/* line 76, src/style.sass */
 body #page-wrapper #claim {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 900px;
+  width: 940px;
   margin-left: 0;
   margin-right: 0;
   background: url("images/claim-bg.gif");
   text-align: center;
-  padding: 20px;
   border: 3px solid #315e84;
   -webkit-border-radius: 4px;
-  height: 130px;
+  width: 934px;
 }
-/* line 87, src/style.sass */
+/* line 85, src/style.sass */
 body #page-wrapper #claim p {
   font-family: "Yanone Kaffeesatz", serif;
   font-style: normal;
@@ -210,6 +208,8 @@ body #page-wrapper #claim p {
   text-decoration: none;
   text-transform: none;
   font-size: 40px;
+  margin: 0;
+  padding: 20px;
 }
 /* line 90, src/style.sass */
 body #page-wrapper #claim a {
@@ -293,42 +293,29 @@ body h1, body h2, body h3, body h4, body h5, body h6, body p {
   padding: 10px;
 }
 /* line 146, src/style.sass */
-body h1, body h3, body h4 {
+body h1, body h2, body h2 a, body h3, body h4 {
   font-family: "Yanone Kaffeesatz", arial, serif;
   font-weight: 200;
   font-size: 40px;
   line-height: 120%;
 }
 /* line 151, src/style.sass */
-body h2 {
-  margin-bottom: 5px;
-}
-/* line 153, src/style.sass */
-body h2 a {
-  font-family: Helvetica, arial, serif;
-  font-size: 20px;
-  line-height: 120%;
-  color: #373737;
-  text-decoration: none;
-}
-/* line 159, src/style.sass */
 body h4 {
-  color: #373737;
   margin: 0px;
   line-height: 90%;
 }
-/* line 163, src/style.sass */
+/* line 154, src/style.sass */
 body p {
   font-size: 15px;
   font-family: Helvetica, arial, serif;
 }
-/* line 166, src/style.sass */
+/* line 157, src/style.sass */
 body a {
   color: #373737;
   -webkit-transition: color 0.3s ease;
   text-decoration: none;
 }
-/* line 170, src/style.sass */
+/* line 161, src/style.sass */
 body a:hover {
   color: white;
 }
@@ -450,7 +437,7 @@ body #content-wrapper #content .post .entry-wrapper {
 }
 /* line 25, src/partials/_blog-content.sass */
 body #content-wrapper #content .post .entry-wrapper .entry {
-  background: url("images/claim-bg.gif");
+  background: url("images/claim-bg.gif") repeat;
   border: 3px solid #315e84;
   -webkit-border-radius: 4px;
   width: 814px;
@@ -468,9 +455,10 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper {
   width: 820px;
   margin-left: 0;
   margin-right: 0;
+  margin: 0px 0px 10px 0px;
 }
-/* line 36, src/partials/_blog-content.sass */
-body #content-wrapper #content .post .entry-wrapper #title-wrapper h1 {
+/* line 37, src/partials/_blog-content.sass */
+body #content-wrapper #content .post .entry-wrapper #title-wrapper h1, body #content-wrapper #content .post .entry-wrapper #title-wrapper h2 a {
   display: inline;
   float: left;
   margin-left: 10px;
@@ -479,7 +467,7 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper h1 {
   margin-left: 0;
   width: 719px;
 }
-/* line 40, src/partials/_blog-content.sass */
+/* line 41, src/partials/_blog-content.sass */
 body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-cloud {
   display: inline;
   float: left;
@@ -499,9 +487,9 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   height: 32px;
   width: 46px;
   padding: 10px 0px 0px 0px;
-  margin: 10px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
-/* line 50, src/partials/_blog-content.sass */
+/* line 51, src/partials/_blog-content.sass */
 body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-cloud:hover {
   -moz-opacity: 1;
   -webkit-opacity: 1;
@@ -511,7 +499,7 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-/* line 52, src/partials/_blog-content.sass */
+/* line 53, src/partials/_blog-content.sass */
 body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-cloud a {
   color: white;
   text-align: center;
@@ -520,7 +508,7 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   width: 100%;
 }
 
-/* line 59, src/partials/_blog-content.sass */
+/* line 60, src/partials/_blog-content.sass */
 .category-image {
   display: inline;
   float: left;
@@ -531,7 +519,7 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   height: 50px;
   margin-bottom: 10px;
 }
-/* line 64, src/partials/_blog-content.sass */
+/* line 65, src/partials/_blog-content.sass */
 .category-image .uncategorized {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -545,7 +533,7 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   height: 100%;
   -webkit-transition: opacity 0.3s ease;
 }
-/* line 70, src/partials/_blog-content.sass */
+/* line 71, src/partials/_blog-content.sass */
 .category-image .uncategorized:hover {
   -moz-opacity: 1;
   -webkit-opacity: 1;
@@ -555,11 +543,93 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-/* line 72, src/partials/_blog-content.sass */
+/* line 73, src/partials/_blog-content.sass */
 .category-image .uncategorized a {
   display: block;
   height: 100%;
   width: 100%;
+}
+
+/* line 2, src/partials/_blog-overview.sass */
+body.blog .post, body.category .post, body.search .post {
+  margin-bottom: 50px;
+}
+/* line 5, src/partials/_blog-overview.sass */
+body.blog .more_entries, body.category .more_entries, body.search .more_entries {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 820px;
+  padding-left: 120px;
+  text-align: center;
+}
+/* line 10, src/partials/_blog-overview.sass */
+body.blog .wp-pagenavi a, body.blog .wp-pagenavi .current, body.category .wp-pagenavi a, body.category .wp-pagenavi .current, body.search .wp-pagenavi a, body.search .wp-pagenavi .current {
+  background-color: #373737;
+  display: inline-block;
+  padding: 5px 10px 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-shadow: 0 -1px 1px #222222;
+  border-bottom: 1px solid #222222;
+  position: relative;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-transition: opacity 0.3s ease;
+  outline-style: none;
+  outline-width: 0px;
+  border: none;
+  width: auto;
+  clear: both;
+  -moz-opacity: 0.6;
+  -webkit-opacity: 0.6;
+  -o-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  border: none;
+  margin-right: 5px;
+}
+/* line 38, src/partials/_mixins.sass */
+body.blog .wp-pagenavi a:hover, body.blog .wp-pagenavi .current:hover, body.category .wp-pagenavi a:hover, body.category .wp-pagenavi .current:hover, body.search .wp-pagenavi a:hover, body.search .wp-pagenavi .current:hover {
+  -moz-opacity: 1;
+  -webkit-opacity: 1;
+  -o-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+/* line 40, src/partials/_mixins.sass */
+body.blog .wp-pagenavi a:active, body.blog .wp-pagenavi .current:active, body.category .wp-pagenavi a:active, body.category .wp-pagenavi .current:active, body.search .wp-pagenavi a:active, body.search .wp-pagenavi .current:active {
+  margin-top: 2px;
+}
+/* line 14, src/partials/_blog-overview.sass */
+body.blog .wp-pagenavi a:active, body.blog .wp-pagenavi .current:active, body.category .wp-pagenavi a:active, body.category .wp-pagenavi .current:active, body.search .wp-pagenavi a:active, body.search .wp-pagenavi .current:active {
+  margin-top: 0px;
+}
+/* line 16, src/partials/_blog-overview.sass */
+body.blog .wp-pagenavi .current, body.category .wp-pagenavi .current, body.search .wp-pagenavi .current {
+  -moz-opacity: 1;
+  -webkit-opacity: 1;
+  -o-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+/* line 19, src/partials/_blog-overview.sass */
+body.blog h2.spacer, body.category h2.spacer, body.search h2.spacer {
+  margin-bottom: 20px;
 }
 
 /* line 1, src/partials/_comments.sass */
@@ -694,7 +764,7 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
 
 /* line 58, src/partials/_comments.sass */
 #respond {
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 /* line 60, src/partials/_comments.sass */
 #respond #commentform {
@@ -702,6 +772,10 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   color: white;
 }
 /* line 63, src/partials/_comments.sass */
+#respond #commentform p {
+  padding: 10px;
+}
+/* line 65, src/partials/_comments.sass */
 #respond #commentform label {
   font-family: "Yanone Kaffeesatz", serif;
   font-style: normal;
@@ -714,7 +788,7 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   display: block;
   padding: 0px 10px;
 }
-/* line 69, src/partials/_comments.sass */
+/* line 71, src/partials/_comments.sass */
 #respond #commentform input, #respond #commentform textarea {
   border: 1px solid white;
   font-size: 19px;
@@ -728,22 +802,22 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   display: block;
   color: black;
 }
-/* line 81, src/partials/_comments.sass */
+/* line 83, src/partials/_comments.sass */
 #respond #commentform input:focus, #respond #commentform textarea:focus {
   outline-style: none;
   outline-width: 0px;
   -webkit-box-shadow: 0 0 8px white;
   -moz-box-shadow: 0 0 8px white;
 }
-/* line 86, src/partials/_comments.sass */
+/* line 88, src/partials/_comments.sass */
 #respond #commentform textarea {
   resize: none;
 }
-/* line 88, src/partials/_comments.sass */
+/* line 90, src/partials/_comments.sass */
 #respond #commentform #submit-button {
   height: 30px;
 }
-/* line 90, src/partials/_comments.sass */
+/* line 92, src/partials/_comments.sass */
 #respond #commentform #submit-button input {
   background: #373737;
   -moz-opacity: 0.6;
@@ -798,7 +872,7 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
 #respond #commentform #submit-button input:active {
   margin-top: 2px;
 }
-/* line 94, src/partials/_comments.sass */
+/* line 96, src/partials/_comments.sass */
 #respond #commentform #submit-button input:hover {
   -moz-opacity: 1;
   -webkit-opacity: 1;
@@ -808,9 +882,127 @@ body #content-wrapper #content .post .entry-wrapper #title-wrapper .comment-clou
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-/* line 96, src/partials/_comments.sass */
+/* line 98, src/partials/_comments.sass */
 #respond #commentform #submit-button input:active {
   margin-top: 3px;
+}
+
+/* line 103, src/partials/_comments.sass */
+small a {
+  padding: 10px;
+}
+
+/* line 1, src/partials/_contactform.sass */
+.wpcf7-form {
+  margin-top: 30px;
+}
+/* line 3, src/partials/_contactform.sass */
+.wpcf7-form p {
+  font-family: "Yanone Kaffeesatz", serif;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 30px;
+  margin-bottom: 10px;
+  display: block;
+  padding: 0px 0px;
+}
+/* line 9, src/partials/_contactform.sass */
+.wpcf7-form p.padding {
+  padding: 0px 10px;
+}
+/* line 11, src/partials/_contactform.sass */
+.wpcf7-form input, .wpcf7-form textarea {
+  border: 1px solid white;
+  font-size: 19px;
+  margin: 10px 0px 10px 0px;
+  -moz-border-radius: 3px;
+  -moz-transition: -moz-box-shadow 0.2s ease;
+  padding: 5px 5px 5px 10px;
+  -webkit-border-radius: 3px;
+  -webkit-transition: -webkit-box-shadow 0.2s ease;
+  width: 535px;
+  display: block;
+  color: black;
+}
+/* line 23, src/partials/_contactform.sass */
+.wpcf7-form input:focus, .wpcf7-form textarea:focus {
+  outline-style: none;
+  outline-width: 0px;
+  -webkit-box-shadow: 0 0 8px white;
+  -moz-box-shadow: 0 0 8px white;
+}
+/* line 28, src/partials/_contactform.sass */
+.wpcf7-form textarea {
+  resize: none;
+}
+/* line 30, src/partials/_contactform.sass */
+.wpcf7-form .wpcf7-submit {
+  background-color: #373737;
+  display: inline-block;
+  padding: 5px 10px 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-shadow: 0 -1px 1px #222222;
+  border-bottom: 1px solid #222222;
+  position: relative;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-transition: opacity 0.3s ease;
+  outline-style: none;
+  outline-width: 0px;
+  border: none;
+  width: auto;
+  clear: both;
+  -moz-opacity: 0.6;
+  -webkit-opacity: 0.6;
+  -o-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  cursor: pointer;
+}
+/* line 38, src/partials/_mixins.sass */
+.wpcf7-form .wpcf7-submit:hover {
+  -moz-opacity: 1;
+  -webkit-opacity: 1;
+  -o-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+/* line 40, src/partials/_mixins.sass */
+.wpcf7-form .wpcf7-submit:active {
+  margin-top: 2px;
+}
+/* line 33, src/partials/_contactform.sass */
+.wpcf7-form .wpcf7-submit:active {
+  margin-top: 10px;
+}
+/* line 36, src/partials/_contactform.sass */
+.wpcf7-form .wpcf7-not-valid-tip-no-ajax {
+  font-size: 15px;
+  font-family: Helvetica, arial, serif;
+  color: #373737;
+}
+/* line 41, src/partials/_contactform.sass */
+.wpcf7-form .wpcf7-validation-errors, .wpcf7-form .wpcf7-mail-sent-ok {
+  font-family: Helvetica, arial, serif;
+  color: white;
+  border-color: #315e84;
+  padding: 10px 10px;
+  margin: 0px;
 }
 
 /* line 1, src/partials/_footer.sass */

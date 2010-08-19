@@ -25,6 +25,7 @@ get_header(); ?>
   ?>
   
   <div id="blog-entries">
+    <h1>Latest Posts</h1>
     <?php query_posts('posts_per_page=3'); ?>
     <?php while (have_posts()) : the_post(); ?>
      <div class="blog-entry">
@@ -36,7 +37,7 @@ get_header(); ?>
   </div>
   
   <div id="latest-tweets">
-    
+    <h1>Latest Tweets</h1>
   </div>
   
 </div><!-- #content-wrapper -->

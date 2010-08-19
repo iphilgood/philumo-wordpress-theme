@@ -40,10 +40,9 @@ body
         +grid(7,24)
         +alpha
         #name
-          +alpha
-          +omega
           :height 55px
           :background url(images/logo.png) no-repeat
+          :margin-left 10px
           a
             :display block
             :width 100%
@@ -75,18 +74,19 @@ body
             a
               :border-color $white
     #claim
-      +grid(23,24)
+      +grid(24,24)
       +alpha
       +omega
       :background url('images/claim-bg.gif')
       :text-align center
-      :padding 20px
       :border 3px solid $darkblue
       :-webkit-border-radius 4px
-      :height 130px
+      :width 934px
       p
         +font-fam
         :font-size 40px
+        :margin 0
+        :padding 20px
       a
         :color $darkgrey
         :text-decoration none
@@ -143,21 +143,12 @@ body
   h1, h2, h3, h4, h5, h6, p
     :color $white
     :padding 10px
-  h1, h3, h4
+  h1, h2, h2 a, h3, h4
     :font-family 'Yanone Kaffeesatz', arial, serif
     :font-weight 200
     :font-size 40px
     :line-height 120%
-  h2
-    :margin-bottom 5px
-    a
-      :font-family Helvetica, arial, serif
-      :font-size 20px
-      :line-height 120%
-      :color $darkgrey
-      :text-decoration none
   h4
-    :color $darkgrey
     :margin 0px
     :line-height 90%
   p
@@ -177,6 +168,7 @@ body
 
 @import partials/post-navigation
 @import partials/blog-content
+@import partials/blog-overview
 @import partials/comments
-@import partials/form
+@import partials/contactform
 @import partials/footer

@@ -1,0 +1,46 @@
+.wpcf7-form
+  :margin-top 30px
+  p
+    +font-fam
+    :font-size 30px
+    :margin-bottom 10px
+    :display block
+    :padding 0px 0px
+  p.padding
+    :padding 0px 10px
+  input, textarea
+    :border 1px solid $white
+    :font-size 19px
+    :margin 10px 0px 10px 0px
+    :-moz-border-radius 3px
+    :-moz-transition -moz-box-shadow 0.2s ease
+    :padding 5px 5px 5px 10px
+    :-webkit-border-radius 3px
+    :-webkit-transition -webkit-box-shadow 0.2s ease
+    :width 535px
+    :display block
+    :color $black
+    &:focus
+      :outline-style none
+      :outline-width 0px
+      :-webkit-box-shadow 0 0 8px $white
+      :-moz-box-shadow 0 0 8px $white
+  textarea
+    :resize none
+  .wpcf7-submit
+    +button
+    :cursor pointer
+    &:active
+      :margin-top 10px
+  
+  .wpcf7-not-valid-tip-no-ajax
+    :font-size 15px
+    :font-family Helvetica, arial, serif
+    :color $darkgrey
+    
+  .wpcf7-validation-errors, .wpcf7-mail-sent-ok
+    :font-family Helvetica, arial, serif
+    :color $white
+    :border-color $darkblue
+    :padding 10px 10px
+    :margin 0px

@@ -3,8 +3,8 @@
   <div id="content">
     
     <div id="post-navigation">
-      <span class="awesome left"><?php previous_post('%', '', 'yes', 'yes'); ?></span>
-      <span class="awesome right"><?php next_post('%', '', 'yes', 'yes'); ?></span>
+      <span class="awesome left"><?php previous_post_link('%link'); ?></span>
+      <span class="awesome right"><?php next_post_link('%link'); ?></span>
     </div>
 
   	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -53,9 +53,9 @@
       </div>
         <div class="entry-wrapper">
           <div id="title-wrapper">
-            <h1>
-              <?php the_title(); ?>
-            </h1>
+            <h2>
+              <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+            </h2>
             <div class="comment-cloud">
               <!-- Comments  -->
               <?php comments_popup_link('0', '1', '%'); ?>
@@ -66,8 +66,6 @@
           </div>
           <?php comments_template(); ?>
         </div>
-
-        <?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
       </div>
     <?php endwhile; endif; ?>
   </div>

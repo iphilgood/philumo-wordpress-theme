@@ -56,10 +56,12 @@
     :float left
 
 #respond
-  :margin-top 20px
+  :margin 20px 0px
   #commentform
     :margin-top 20px
     :color $white
+    p
+      :padding 10px
     label
       +font-fam
       :font-size 30px
@@ -95,4 +97,9 @@
           +opacity(1)
         &:active
           :margin-top 3px
+          
+#cancel-comment-reply
+small
+  a
+    :padding 10px
   

@@ -1,0 +1,20 @@
+body.blog, body.category, body.search
+  .post
+    :margin-bottom 50px
+
+  .more_entries
+    +grid(21,24)
+    +grid-prefix(3,24)
+    :text-align center
+  .wp-pagenavi
+    a, .current
+      +button
+      :border none
+      :margin-right 5px
+      &:active
+        :margin-top 0px
+    .current
+      +opacity(1)
+  
+  h2.spacer
+    :margin-bottom 20px
