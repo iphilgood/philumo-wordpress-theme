@@ -31,11 +31,11 @@
               </div>
             <?php } elseif (in_category('travelling')) { ?>
               <div class="travelling">
-                <a href="<?php echo get_category_link(5); ?>" title="Travelling"></a>
+                <a href="<?php echo get_category_link(22); ?>" title="Travelling"></a>
               </div>
             <?php } elseif (in_category('art')) { ?>
               <div class="art">
-                <a href="<?php echo get_category_link(6); ?>" title="Art"></a>
+                <a href="<?php echo get_category_link(21); ?>" title="Art"></a>
               </div>
             <?php } else { ?>
               <div class="uncategorized">
