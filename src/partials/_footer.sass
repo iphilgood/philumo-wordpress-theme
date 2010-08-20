@@ -3,17 +3,131 @@
   :height 11px
   :margin 0px 0px 50px 0px
 
-#footer-wrapper
+#footer-wrapper, #footer-bottom-wrapper
   +grid-container
   :background $white
   :height 500px
   :float left
   :width 100%
   :margin 100px 0px 0px 0px
-  
+#footer-bottom-wrapper
+  :background url('images/footer-bottom-bg.png')
+  :margin 0
+  :height 50px
+ 
 
 #footer
   +grid-container
   h4
     :color $darkblue
     :padding 0px
+  .description
+    :font-size 15px
+    :font-family Helvetica, arial, serif
+    :margin 0px 0px 10px 0px
+    :clear both
+    :float left
+
+#primary, #secondary, #tertiary
+  +grid(8,24)
+#primary
+  +alpha
+#tertiary
+  +omega
+
+#searchform
+  :float left
+#search
+  :height 100px
+  :float left
+  input, textarea
+    :border 1px solid $darkgrey
+    :font-size 19px
+    :margin 0px 10px 10px 0px
+    :-moz-border-radius 3px
+    :-moz-transition -moz-box-shadow 0.2s ease
+    :padding 5px 5px 5px 10px
+    :-moz-border-radius 3px
+    :-webkit-border-radius 3px
+    :border-radius 3px
+    :-webkit-transition -webkit-box-shadow 0.2s ease
+    :width 200px
+    :display block
+    :color $black
+    :float left
+    &:focus
+      :outline-style none
+      :outline-width 0px
+      :-webkit-box-shadow 0 0 8px $darkgrey
+      :-moz-box-shadow 0 0 8px $darkgrey
+  #searchsubmit
+    +button
+    :cursor pointer
+    :float left
+    :clear none
+    :line-height 120%
+    &:active
+      :margin-top 12px
+
+#secondary
+  li
+    +grid(4,24)
+    +omega
+    +opacity(0.3)
+    :margin 0px
+    :padding 0px
+    :-webkit-transition opacity 0.3s ease
+    &:hover
+      +opacity(1)
+  .cat-item
+    :margin 10px 0px
+  .cat-item-6, .cat-item-4
+    :margin 25px 0px 0px 0px
+  a
+    :float left
+    :display block
+    
+#subscribe-rss, #twitter, #facebook, #lastfm, #github
+  :background url('images/social.png') no-repeat
+  :background-position 0px 0px
+  :height 50px
+  :margin-bottom 10px
+  :width 270px
+  :float left
+  +opacity(0.3)
+  :-webkit-transition opacity 0.3s ease
+  &:hover
+    +opacity(1)
+  a
+    :display block
+    :clear both
+    :padding 15px 10px 0px 65px
+    :color $darkgrey
+    :font-size 15px
+    :font-family Helvetica, arial, serif
+    :height 35px
+    &:hover
+      :color $darkgrey
+#twitter
+  :background-position 0px -50px
+#facebook
+  :background-position 0px -100px
+#lastfm
+  :background-position 0px -150px
+#github
+  :background-position 0px -200px
+  
+#footer-bottom
+  +grid-container
+  p
+    :color $lightgrey
+    :text-shadow 2px 2px 2px #000
+    :margin 5px 0px 0px 0px
+    :width 100%
+    :text-align center
+    :font-weight bold
+    a
+      :color $darkblue
+      :-webkit-transition color 0.3s ease
+      &:hover
+        :color $white

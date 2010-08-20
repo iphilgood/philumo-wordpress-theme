@@ -65,9 +65,10 @@ body
               :padding 10px
               //+opacity(0.6)
               :border 3px solid $darkblue
-              :-webkit-border-radius 4px
               :display block
               :-webkit-transition border-color 0.3s ease
+              :-webkit-border-radius 4px
+              :-moz-border-radius 4px
               &:hover
                 :border-color $white
           li.current_page_item, li.current_page_parent
@@ -80,8 +81,11 @@ body
       :background url('images/claim-bg.gif')
       :text-align center
       :border 3px solid $darkblue
-      :-webkit-border-radius 4px
       :width 934px
+      :-webkit-border-radius 4px
+      :-moz-border-radius 4px
+      :border-radius 4px
+      :height 160px
       p
         +font-fam
         :font-size 40px
@@ -160,12 +164,16 @@ body
     :text-decoration none
     &:hover
       :color $white
+  input, textarea
+    :color $black
+    :background-color $white
 
 
 //
 // Partial Imports
 //
 
+@import partials/homepage
 @import partials/post-navigation
 @import partials/blog-content
 @import partials/blog-overview

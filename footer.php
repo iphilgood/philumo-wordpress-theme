@@ -14,45 +14,76 @@
       	 */
       	if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
 
-      			<li id="search" class="widget-container widget_search">
-      			  <h4 class="widget-title">Search</h4>
-      				<?php get_search_form(); ?>
-      			</li>
+    			<li id="search" class="widget-container widget_search">
+    			  <h4 class="widget-title">Search</h4>
+    			  <span class="description">If you search something get it here.</span>
+    				<?php get_search_form(); ?>
+    			</li>
 
-      			<li id="archives" class="widget-container">
-      				<h3 class="widget-title"><?php _e( 'Archives', 'philumo' ); ?></h3>
-      				<ul>
-      					<?php wp_get_archives( 'type=monthly' ); ?>
-      				</ul>
-      			</li>
 
-      			<li id="meta" class="widget-container">
-      				<h4 class="widget-title"><?php _e( 'Meta', 'philumo' ); ?></h4>
-      				<ul>
-      					<?php wp_register(); ?>
-      					<li><?php wp_loginout(); ?></li>
-      					<?php wp_meta(); ?>
-      				</ul>
-      			</li>
-
-      		<?php endif; // end primary widget area ?>
-      			</ul>
-      		</div><!-- #primary .widget-area -->
-
-      <?php
-      	// A second sidebar for widgets, just because.
-      	if ( is_active_sidebar( 'secondary-widget-area' ) ) : ?>
-
-      		<div id="secondary" class="widget-area" role="complementary">
-      			<ul class="xoxo">
-      				<?php dynamic_sidebar( 'secondary-widget-area' ); ?>
-      			</ul>
-      		</div><!-- #secondary .widget-area -->
-
-      <?php endif; ?>
-
+    		<?php endif; // end primary widget area ?>
+    		</ul>
+    	</div><!-- #primary .widget-area -->
+    	
+    	<div id="secondary">
+    	 
+    	  <?php if ( !function_exists('dynamic_sidebar')
+          
+          || !dynamic_sidebar() ) : ?>
+        
+        <?php endif; ?>
+    	 
+    	</div>
+    	
+    	<div id="tertiary">
+    	  <h4>Where To Find Me</h4>
+    	  <span class="description">Yes! I'm social.</span>
+    	  
+    	  <div id="subscribe-rss">
+    	    <a href="http://www.philschilter.ch/?feed=rss2" target="_blank">
+    	     Subscribe to my blog
+    	    </a>
+    	  </div>
+    	  
+    	  <div id="twitter">
+    	    <a href="http://www.twitter.com/i_philgood" target="_blank">
+    	      Follow me on Twitter.
+    	    </a>
+    	  </div>
+    	  
+    	  <div id="facebook">
+    	    <a href="http://www.facebook.com/phil.schilter" target="_blank">
+    	      My Facebook profile.
+    	    </a>
+    	  </div>
+    	  
+    	  <div id="lastfm">
+    	    <a href="http://www.lastfm.com/user/philu7" target="_blank">
+    	      Because music is awesome.
+    	    </a>
+    	  </div>
+    	  
+    	  <div id="github">
+    	    <a href="http://www.github.com/iphilgood" target="_blank">
+    	      Fork me on github.
+    	    </a>
+    	  </div>
+    	  
+    	</div>
+    	
     </div>
   </div>
+  
+  <div id="footer-bottom-wrapper">
+    <div id="footer-bottom">
+      <p>
+        © <?php the_date('Y'); ?> <a href="#top" title="Scroll back to top">Phil Good</a>. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+  
+  
+
 <!-- Don't forget analytics -->
 
 </body>

@@ -52,7 +52,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+  <a name="#"></a>
   <div id="page-wrapper">
     
     <div id="header">

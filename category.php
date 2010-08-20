@@ -22,13 +22,21 @@
             <!-- Print a link to this category -->
             
             
-            <?php if (is_category('Category A')) { ?>
-            <p>This is the text to describe category A</p>
-            <?php } elseif (is_category('Category B')) { ?>
-            <p>This is the text to describe category B</p>
+            <?php if (in_category('Music')) { ?>
+              <div class="music">
+                <a href="<?php echo get_category_link(4); ?>" title="Music"></a>
+              </div>
+            <?php } elseif (in_category('travelling')) { ?>
+              <div class="travelling">
+                <a href="<?php echo get_category_link(5); ?>" title="Travelling"></a>
+              </div>
+            <?php } elseif (in_category('art')) { ?>
+              <div class="art">
+                <a href="<?php echo get_category_link(6); ?>" title="Art"></a>
+              </div>
             <?php } else { ?>
               <div class="uncategorized">
-                <a href="<?php echo $category_link; ?>" title="Uncategorized"></a>
+                <a href="<?php echo get_category_link(1); ?>" title="Uncategorized"></a>
               </div>
             <?php } ?>
           </div>

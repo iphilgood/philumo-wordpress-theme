@@ -10,12 +10,10 @@ jQuery(document).ready(function($) {
   
   $('#name').mouseover(function() {
     $(this).animate({ height: '100px' }, 500);
-    console.log("jetzt isches dunne");
   });
   
   $('#name').mouseout(function() {
     $(this).animate({ height: '55px' }, 500);
-    console.log('jetzt isches wider dobe');
   });
   
   $("#latest-tweets").tweet({
@@ -23,5 +21,11 @@ jQuery(document).ready(function($) {
     count: 3,
     loading_text: "loading tweets..."
   });
-
+  
+  $('a[href=#top]').click(function(){
+    $('html, body').animate({scrollTop:0}, 'slow');
+    return false;
+  });
+  
 });
+
